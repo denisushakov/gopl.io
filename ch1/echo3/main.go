@@ -10,11 +10,15 @@ import (
 	"fmt"
 	"os"
 	"strings"
+	"time"
 )
 
-//!+
+// !+
 func main() {
-	fmt.Println(strings.Join(os.Args[1:], " "))
+	t := time.Now()
+	fmt.Println(strings.Join(os.Args, " "))
+	secs := time.Since(t).Seconds()
+	fmt.Println(secs)
 }
 
 //!-
